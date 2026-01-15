@@ -1,0 +1,76 @@
+# Gitで管理しないファイル
+
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# データベース
+*.db
+*.sqlite
+*.sqlite3
+
+# モデルディレクトリ (全て)
+models/
+models_*
+
+# ChromaDB
+chroma_db/
+temp_chroma_uploads/
+
+# ユーザーデータ・履歴
+chat_histories/
+users.db
+history.db
+
+# 秘匿情報
+secret.key
+*.license
+.license
+
+
+# NASマウントポイント
+mnt/*
+!mnt/.gitkeep
+
+# 内部ストレージ
+internal_storage/*
+!internal_storage/.gitkeep
+
+# Next.js
+.next/
+out/
+node_modules/
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+# ログ
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 環境変数
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
