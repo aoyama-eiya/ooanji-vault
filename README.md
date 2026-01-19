@@ -23,27 +23,30 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 
-### 2. Installation (Clone to /opt)
+### 2. Installation (Setup in /opt)
 
-We recommend installing the system in the `/opt` directory.
+We recommend installing the system in the `/opt` directory, which is the standard location for optional software on Linux. You can jump directly to this directory from anywhere using an absolute path.
 
 ```bash
-# Setup directory
-sudo mkdir -p /opt
-sudo chown $USER:$USER /opt
+# 1. Move to the /opt directory (no matter where you are)
 cd /opt
 
-# Clone the repository
-git clone https://github.com/aoyama-eiya/oonanji-vault.git
-cd oonanji-vault
+# 2. Grant your user permission to write in /opt (required for cloning)
+sudo chown $USER:$USER /opt
 
-# Note: If your folder is named 'oonanji-vault-main', please rename it:
-# mv oonanji-vault-main oonanji-vault
+# 3. Clone the repository
+git clone https://github.com/aoyama-eiya/oonanji-vault.git
+
+# 4. Enter the project folder
+cd /opt/oonanji-vault
+
+# Note: If the folder name became 'oonanji-vault-main' (from ZIP download):
+# mv /opt/oonanji-vault-main /opt/oonanji-vault && cd /opt/oonanji-vault
 ```
 
 ### 3. Startup (from /system directory)
 
-Inside the `system` folder, start the containers:
+Go to the `system` directory and start the system with Docker:
 
 ```bash
 cd /opt/oonanji-vault/system
